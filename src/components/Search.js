@@ -1,6 +1,24 @@
 import React from 'react';
 
- 
+const Search = ({handleSearchInputChange}) => {
+
+  return (
+    <div className="search-bar form-inline">
+      <input
+        className="form-control"
+        type="text"
+        onChange={(event) => handleSearchInputChange(event.target.value)}
+      />
+      <button className="btn hidden-sm-down">
+        <span className="glyphicon glyphicon-search"></span>
+      </button>
+    </div>
+  );
+};
+
+export default Search;
+
+/*
 class Search extends React.Component {
   constructor(props) {
     super(props);
@@ -33,5 +51,4 @@ class Search extends React.Component {
     );
   }
 }
-
-export default Search;
+*/
